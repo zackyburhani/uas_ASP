@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements>
+  
+  <Ad>
+    <ImageUrl>~/Gambar/AdRotator/Iklan1.jpg</ImageUrl>
+    <NavigateUrl>http://www.budiluhur.ac.id</NavigateUrl>
+    <Impressions>10</Impressions>
+    <AlternateText>GAMBAR IKLAN MIE</AlternateText>
+    <Keyword>Budi Luhur</Keyword>
+  </Ad>
+
+  <Ad>
+    <ImageUrl>~/Gambar/AdRotator/iklan2.jpg</ImageUrl>
+    <NavigateUrl>http://www.fti.budiluhur.ac.id</NavigateUrl>
+    <Impressions>15</Impressions>
+    <AlternateText>GAMBAR PAKET</AlternateText>
+    <Keyword>Budi Luhur</Keyword>
+  </Ad>
+
+  <Ad>
+    <ImageUrl>~/Gambar/AdRotator/iklan3.jpg</ImageUrl>
+    <NavigateUrl>http://www.student.budiluhur.ac.id</NavigateUrl>
+    <Impressions>15</Impressions>
+    <AlternateText>GAMBAR MCD</AlternateText>
+    <Keyword>Budi Luhur</Keyword>
+  </Ad>
+  
+</Advertisements>

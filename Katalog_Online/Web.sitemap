@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="~/Default.aspx" title="Home"  description="Halaman Utama">
+    
+        <siteMapNode url="~/DataKategori/ManajemenKategori.aspx" title="Manajemen Kategori"  description="Data Kategori" />
+        <siteMapNode url="~/DataBarang/ManajemenBarang.aspx" title="Manajemen Barang"  description="Data Barang" />
+        <siteMapNode url="~/DataPengguna/ManajemenPengguna.aspx" title="Manajemen Pengguna"  description="Data Pengguna" />
+      
+        <siteMapNode url="" title="Manajemen Promo"  description="Data Promo">
+          <siteMapNode url="~/DataPromo/TambahPromo.aspx" title="Tambah Promo"  description="Tambah Promo" />
+          <siteMapNode url="~/DataPromo/ModifikasiPromo.aspx" title="Modifikasi Promo"  description="Modifikasi Promo" />
+        </siteMapNode>
+
+        <siteMapNode url="" title="Laporan"  description="" >
+          <siteMapNode url="~/Report/LaporanKategori.aspx" title="Laporan Kategori"  description="" />
+          <siteMapNode url="~/Report/LaporanPenjualan.aspx" title="Laporan Penjualan"  description="" />
+        </siteMapNode>
+    
+    </siteMapNode>
+</siteMap>

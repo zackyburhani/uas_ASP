@@ -1,0 +1,113 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>UAS</title>
+    
+    <link rel="stylesheet" type="text/css" href="~/Content/bootstrap.min.css">
+    
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    
+    <nav class="navbar navbar-expand-md navbar-dark" style="background-color: #2d8659">
+    <ul class="navbar-nav mr-auto">
+    
+         <div id="wrapper">
+       
+        <div id="menu">
+            <ul>
+                <li class="first">
+                    <asp:LinkButton ID="lbtnHome" runat="server" Font-Names="Century Gothic" 
+                        ForeColor="#CCCCCC" PostBackUrl="~/Default.aspx" Font-Bold="True">HOME</asp:LinkButton>
+                </li>
+                <li>
+                    <asp:LinkButton ID="lbtnLogin" runat="server" Font-Names="Century Gothic" 
+                        ForeColor="#CCCCCC" onclick="lbtnLogin_Click" PostBackUrl="~/Login.aspx" 
+                        Font-Bold="True">LOGIN</asp:LinkButton>
+&nbsp;
+                    <asp:LinkButton ID="lbtnLogout" runat="server" Font-Names="Century Gothic" 
+                        ForeColor="#CCCCCC" onclick="lbtnLogout_Click" Font-Bold="True">LOGOUT</asp:LinkButton>
+&nbsp;</li>
+                <li>
+                    <asp:LinkButton ID="lbtnListKereta" runat="server" Font-Names="Century Gothic" 
+                        ForeColor="#CCCCCC" PostBackUrl="~/DataBelanja/KeranjangBelanja.aspx" 
+                        Font-Bold="True">LIST KERETA BELANJA</asp:LinkButton>
+&nbsp;</li>
+                <li class="last">
+                    <asp:Label ID="Label1" runat="server" Font-Names="Century Gothic" 
+                        Text="Selamat Datang," Font-Bold="True"></asp:Label>
+                    <asp:Label ID="lblUsername" runat="server" Font-Names="Century Gothic" 
+                        Text="USERNAME" Font-Bold="True" Font-Italic="True"></asp:Label>
+                </li>
+            </ul>
+            <br class="clearfix" />
+        </div>
+    
+    </div>
+      <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+    </ul>
+    </nav>
+
+<div class="jumbotron jumbotron-fluid" style="background-color: #006666">
+  <div class="container">
+  <h1>
+        <asp:LinkButton ID="LinkButton1" runat="server" Font-Names="Century Gothic" ForeColor="white" onclick="LinkButton1_Click">Budi Luhur Store</asp:LinkButton>
+        <h4 style="color:#f2f2f2;">Website Ini Menjual Berbagai Macam Kebutuhan Anda</h4>
+  </h1>
+</div>
+</div>
+    
+    <div id="wrapper2">
+        
+        <div id="splash">
+            <asp:AdRotator ID="AdRotator1" runat="server" Height="230px" Width="960px" 
+                DataSourceID="XmlDS_Banner" />
+            <asp:XmlDataSource ID="XmlDS_Banner" runat="server" DataFile="~/XML_Banner.xml">
+            </asp:XmlDataSource>
+        </div>
+        
+        <div id="page">
+            <div id="content">
+                <table width="100%">
+                    <tr>
+                        <td align="center">
+                            <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource_Menu" 
+                                Orientation="Horizontal" StaticDisplayLevels="2" Font-Bold="True" 
+                                Font-Names="Century Gothic">
+                            </asp:Menu>
+                            <asp:SiteMapDataSource ID="SiteMapDataSource_Menu" runat="server" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <center>
+                                <div>
+                                    <asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server">
+                                   
+                                    </asp:ContentPlaceHolder>
+                                </div>
+                            </center>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+    </div>
+    
+    
+    </form>
+    
+    <div id="footer">
+        &copy; Zacky Burhani 2017
+    </div>
+      <script src="Scripts/bootstrap.min.js"></script>
+       <script src="Scripts/bootstrap.js"></script>
+<asp:ContentPlaceHolder ID="ScriptSection" runat="server" />    
+</body>
+</html>
